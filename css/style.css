@@ -195,34 +195,10 @@ a1:hover{
     grid-row: 1;
 
 }
-/* rsm */
-.rsm__{
-    grid-column: 2/-2;
-    grid-row: 3;
-
-    background: transparent;
-    height: auto;
-
-    display: flex;
-    justify-content: center;
-}
-.rsm__ img{
-    height: 25rem;
-    width: 100%;
-    object-fit: contain;
-}
-.rsm_cnt{
-    display: flex;
-}
-.rsm_txt{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-}
 /*  */
 .chll__{
     grid-column: 1/-1;
-    grid-row: 4;
+    grid-row: 3;
 
     background: var(--clr-bg-02);
     height: auto;
@@ -264,4 +240,28 @@ a1:hover{
     height: 50rem !important;
     width: 100%;
     object-fit: contain;
+}
+/* rsm */
+.rsm__{
+    grid-column: 2/-2;
+    grid-row: 4;
+
+    background: transparent;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+}
+.rsm__ img{
+    height: 25rem;
+    width: 100%;
+    object-fit: contain;
+}
+.rsm_cnt{
+    display: flex;
+}
+.rsm_txt{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
 }
