@@ -562,17 +562,15 @@ a1:hover{
     position: absolute;
     top: -14px;
     left: -10px;
-    z-index: 1;
+    z-index: 0;
 }
 input{
     font-family: 'Abhaya Libre', serif;
-    font-size: 2.4rem;
+    font-size: 2rem;
     color: var(--color-white);
-    position: absolute;
     background: transparent;
     height: 3.2rem;
     width: 78%;
-    z-index: 10;
     border: none;
 }
 input:focus{
@@ -584,7 +582,6 @@ input:focus{
         font-family: 'Abhaya Libre', serif;
         font-size: 1.6rem;
         color: var(--color-white);
-        position: absolute;
         background: transparent;
         height: 3.2rem;
         width: 94%;
@@ -603,4 +600,16 @@ input:focus{
         left: -10px;
         z-index: 1;
     }
+}
+.form-subscribe{
+    display: flex;
+    flex-direction: column;
+}
+.subscribe-email{
+    z-index: 10;
+}
+.subscribe-button{
+    margin-top: 0.5rem;
+    background-color:bisque;
+    z-index: 10;
 }
