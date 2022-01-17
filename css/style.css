@@ -77,8 +77,10 @@ h2{
 }
 h4{
     font-family: 'Abhaya Libre', serif;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.7px;
     font-weight: 900;
+    text-transform: uppercase;
     color: #DDDDDD;
 }
 h5{
@@ -86,14 +88,14 @@ h5{
     font-size: 2rem;
     font-weight: 900;
     color: #DDDDDD;
-    text-shadow: 0px 0px 8px #DDDDDD;
+    /* text-shadow: 0px 0px 8px #DDDDDD; */
 }
 h6{
     font-family: 'Abhaya Libre', serif;
     font-size: 3.6rem;
     font-weight: 900;
     color: #DDDDDD;
-    text-shadow: 0px 0px 8px #DDDDDD;
+    /* text-shadow: 0px 0px 8px #DDDDDD; */
 }
 p{
     color: var(--color-white);
@@ -645,6 +647,8 @@ input::before{
     left: 0;
     bottom: 0;
     z-index: -1;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 /* new change images + text */
@@ -668,16 +672,16 @@ input::before{
     transform: translateX(-8rem);
 }
 .cntnt-text-left h6{
-    transform: translateX(-5rem);
+    transform: translateX(-6.8rem);
 }
 .cntnt-text-right h5{
-    transform: translateX(7.3rem);
+    transform: translateX(8rem);
 }
 .special-h5{
-    transform: translateX(4rem) !important;
+    transform: translateX(5.8rem) !important;
 }
 .cntnt-text-right h6{
-    transform: translateX(5.5rem);
+    transform: translateX(7.1rem);
 }
 .cntnt-text-right{
     position: absolute;
