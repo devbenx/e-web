@@ -28,8 +28,13 @@
 
 
     --clr-bg-01:rgba(252, 252, 245, 1);
-    --clr-bg-02:rgba(212, 213, 250, 1);
+    --clr-bg-02:#D4D5FA;
     --clr-bg-03:rgba(198, 227, 225, 1);
+    --stroke-width: 2;
+    --icon-color: var(--clr-bg-02);
+    --icon-color-fill: none;
+    --icon-color-stroke: var(--clr-bg-02);
+    --icon-stroke-width: var(--stroke-width);
 
 }
 @media screen and (min-width: 550px) {
@@ -50,7 +55,6 @@ h1{
     font-family: 'Abhaya Libre', serif;
     letter-spacing: 0.1rem;
     font-size: 4.9rem;
-    width: fit-content;
     /* font-size: clamp(2.5rem, 1.6200rem + 3.2000vw, 3.5rem); */
     /* CLAMP 940px*/
     /* font-size: 3.5rem; */
@@ -107,6 +111,30 @@ p{
     /* font-size: 1rem; */
     font-weight: 300;
     border: var(--border);
+}
+a h1{
+    color: var(--clr-bg-02);
+    font-family: 'Abhaya Libre', serif;
+    font-size: 1.8rem;
+    /* CLAMP 940px*/
+    /* font-size: 1.15rem; */
+    /* CLAMP 440px*/
+    /* font-size: 1rem; */
+    font-weight: 300;
+    text-align: center;
+    line-height: 1;
+}
+a p{
+    color: var(--clr-bg-03);
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1rem, 0.8680rem + 0.4800vw, 1.15rem);
+    font-weight: 300;
+    text-transform: lowercase;
+    text-align: center;
+    line-height: 1;
+}
+a{
+    text-decoration: none;
 }
 a1, button{
     color: var(--color-white);
@@ -175,13 +203,8 @@ a1:hover{
 }
 .scls{
     display: flex;
+    justify-content: space-evenly;
     margin: auto 0% auto auto;
-}
-.scls img{
-    height: 2.5rem !important;
-    width: auto !important;
-    padding: 0.5rem;
-    margin: auto;
 }
 .scls__{
     display: flex;
@@ -191,6 +214,49 @@ a1:hover{
 }
 .scls__ h4{
     margin-right: 0.5rem;
+}
+.sclsItem__{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 1rem;
+    border: 2px solid var(--clr-bg-02);
+    border-radius: 50%;
+    padding: 0.5rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+.sclsItem{
+    display: flex;
+    position: relative;
+    background-color: var(--clr-bg-02);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+.sclsItem__:nth-child(1) .sclsItem{
+    mask-image: url('svg/icon-youtube.svg');
+    -webkit-mask-image: url('svg/icon-youtube.svg');
+}
+.sclsItem__:nth-child(2) .sclsItem{
+    mask-image: url('svg/icon-pinterest-fill.svg');
+    -webkit-mask-image: url('svg/icon-pinterest-fill.svg');
+}
+.sclsItem__:nth-child(3) .sclsItem{
+    mask-image: url('svg/icon-instagram.svg');
+    -webkit-mask-image: url('svg/icon-instagram.svg');
+}
+.sclsItem__:nth-child(4) .sclsItem{
+    mask-image: url('svg/icon-tiktok.svg');
+    -webkit-mask-image: url('svg/icon-tiktok.svg');
+}
+.sclsItem__:nth-child(5) .sclsItem{
+    mask-image: url('svg/icon-spotify.svg');
+    -webkit-mask-image: url('svg/icon-spotify.svg');
 }
 @media screen and (max-width: 700px) {
     .mn__ header{
@@ -224,17 +290,18 @@ a1:hover{
     display: flex;
     flex-direction: column;
     z-index: 0;
-    padding: 0 var(--pddng);
 }
 .cntnt-img{
     position: relative;
     display: flex;
     object-fit: contain;
-    height: 22rem;
+    height: 32rem;
     width: 100%;
     margin: auto auto 0;
     z-index: 1;
-    opacity: 0.95;
+    opacity: 0.7;
+    mix-blend-mode: overlay;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) contrast(110%);
 }
 .sct-links{
     width: 100%;
@@ -244,18 +311,17 @@ a1:hover{
     margin: 2rem auto auto auto;
     z-index: 10;
 }
-.sct-links div{
-    width: 100%;
-}
-.sct-links img{
+.styledbuttons{
     display: flex;
-
-    max-height: 4.5rem;
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-
-    margin: auto;
+    flex-direction: column;
+    border: 2px solid var(--clr-bg-01) !important;
+    border-radius: 30px;
+    width: min(60%, 24rem);
+    padding: 0.5rem 0;
+    margin-left: 1rem;
+}
+.styledbuttons:nth-child(1){
+    margin-left: 0rem !important;
 }
 @media screen and (max-width: 700px) {
     .cntnt-img{
@@ -697,3 +763,4 @@ input::before{
         display: none;
     }
 }
+
